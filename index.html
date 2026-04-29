@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Rénove Tout 18 couvreur - Toiture, Charpente & Zinguerie</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FF4500",
+            "primary-dark": "#CC3700", 
+            navy: {
+              500: "#334155",
+              700: "#1E293B",
+              800: "#0F172A",
+              900: "#020617",
+            },
+            "background-light": "#F1F5F9",
+            "background-dark": "#0B0F19",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#151B2B",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          boxShadow: {
+            'glow': '0 0 25px rgba(255, 69, 0, 0.4)',
+            'card-hover': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .pulse-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      opacity: 0.8;
+      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      z-index: -1;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .hero-pattern {
+      background-color: #0F172A;
+      background-image: linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77), linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77);
+      background-size: 40px 70px;
+      background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-gray-100 antialiased selection:bg-primary selection:text-white">
+
+<!-- Header modifié avec fond noir (#000000) -->
+<header class="bg-black py-5 border-b border-navy-700 sticky top-0 z-50">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="#" class="block">
+        <img src="https://i.imgur.com/9uaatUV.png" alt="Rénove Tout 18 couvreur" class="h-12 w-auto">
+      </a>
+      <div class="flex flex-col leading-tight">
+        <span class="text-white font-extrabold text-xl uppercase tracking-tight">Rénove Tout 18</span>
+        <span class="text-primary text-xs font-bold uppercase tracking-wider">couvreur</span>
+      </div>
+    </div>
+    <a class="hidden md:flex bg-white hover:bg-gray-100 transition-colors duration-300 text-navy-900 font-black py-3 px-6 rounded items-center gap-2 group border-2 border-transparent hover:border-primary" href="tel:0772015138">
+      <span class="material-symbols-outlined text-2xl text-primary group-hover:rotate-12 transition-transform">call</span>
+      07 72 01 51 38
+    </a>
+    <a class="md:hidden bg-primary text-white p-2 rounded-md shadow-lg" href="tel:0772015138">
+      <span class="material-symbols-outlined">call</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero-pattern relative pt-20 pb-36 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-navy-900/80 to-navy-900/95"></div>
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+  <div class="container mx-auto px-4 relative z-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-navy-800/80 backdrop-blur-sm border border-navy-600 text-white rounded-full px-5 py-2 text-xs font-bold uppercase tracking-wider mb-8 shadow-xl">
+      <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+      URGENCE FUITE 24h/24 · 7j/7 · INTERVENTION RAPIDE
+    </div>
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-tight">
+      COUVREUR À BOURGES <br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">RÉNOVATION & URGENCE</span>
+    </h1>
+    <p class="text-lg md:text-xl text-slate-300 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
+      Spécialiste en toiture, charpente et étanchéité dans le Cher et ses environs. <br class="hidden md:block"/>
+      Interventions pour particuliers et professionnels — <span class="text-white font-bold border-b border-primary/50">devis gratuit et transparent</span>.
+    </p>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+      <div class="relative group w-full md:w-auto">
+        <div class="pulse-ring bg-primary rounded"></div>
+        <a class="relative flex items-center justify-center gap-4 bg-primary hover:bg-primary-dark transition-all text-white text-xl md:text-2xl font-bold py-5 px-12 rounded shadow-glow hover:shadow-orange-600/50 hover:-translate-y-1 w-full md:w-auto" href="tel:0772015138">
+          <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+          APPELER MAINTENANT
+        </a>
+      </div>
+      <div class="flex flex-col items-center md:items-start bg-navy-800/50 p-3 rounded border border-navy-700 backdrop-blur-sm">
+        <span class="text-white font-bold text-lg uppercase tracking-wide flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">description</span>
+          Devis Gratuit
+        </span>
+        <span class="text-slate-400 text-xs mt-0.5">Réponse sous 24h</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
+        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">shield</span>
+        </div>
+        <div class="text-left">
+          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">Garantie décennale</h3>
+          <p class="text-slate-400 text-sm font-medium">Artisans assurés</p>
+        </div>
+      </div>
+      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
+        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">engineering</span>
+        </div>
+        <div class="text-left">
+          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">Savoir‑faire artisanal</h3>
+          <p class="text-slate-400 text-sm font-medium">Équipe qualifiée</p>
+        </div>
+      </div>
+      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
+        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">schedule</span>
+        </div>
+        <div class="text-left">
+          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">24h/7j</h3>
+          <p class="text-slate-400 text-sm font-medium">Intervention rapide</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-background-light dark:bg-background-dark -mt-10 relative z-20 rounded-t-3xl border-t border-white/10">
+  <div class="container mx-auto px-4">
+    <div class="bg-white dark:bg-surface-dark rounded-none md:rounded-lg p-8 md:p-12 shadow-2xl border border-gray-100 dark:border-navy-700 flex flex-col lg:flex-row gap-12 items-center relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-2 h-full bg-primary"></div>
+      <div class="flex-1 z-10">
+        <h2 class="text-3xl md:text-4xl font-black mb-6 text-navy-900 dark:text-white uppercase tracking-tight">Rénove Tout 18 couvreur</h2>
+        <p class="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed text-lg">
+          Entreprise spécialisée dans les travaux de toiture, la rénovation et les interventions d'urgence pour fuites. Nous intervenons rapidement dans un rayon couvrant Trouy, Nevers et toute la région Centre-Val de Loire. Artisans qualifiés, nous proposons des devis gratuits et un service transparent.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+            <div>
+              <span class="font-bold text-navy-900 dark:text-white block text-lg">Devis gratuit</span>
+              <span class="text-sm text-slate-500 dark:text-slate-400">Sans engagement</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+            <div>
+              <span class="font-bold text-navy-900 dark:text-white block text-lg">Intervention rapide</span>
+              <span class="text-sm text-slate-500 dark:text-slate-400">Même le week‑end</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+            <div>
+              <span class="font-bold text-navy-900 dark:text-white block text-lg">Artisans qualifiés</span>
+              <span class="text-sm text-slate-500 dark:text-slate-400">Expérience et sérieux</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+            <div>
+              <span class="font-bold text-navy-900 dark:text-white block text-lg">Service transparent</span>
+              <span class="text-sm text-slate-500 dark:text-slate-400">Prix clairs et précis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/3 bg-navy-50 dark:bg-navy-900 p-10 border border-gray-200 dark:border-navy-700 relative group hover:border-primary/30 transition-colors">
+        <div class="absolute -top-3 left-8 bg-primary text-white px-3 py-1 text-xs font-bold uppercase tracking-widest">Urgence 24h/24</div>
+        <h3 class="font-bold text-navy-900 dark:text-white text-xl mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">water_drop</span>
+          Fuite ou infiltration ?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-8">
+          Une fuite peut causer des dégâts importants. Nous intervenons 7j/7 pour bâchage temporaire et réparation dans les plus brefs délais.
+        </p>
+        <a class="flex items-center justify-center gap-2 text-white bg-navy-900 hover:bg-primary font-bold py-3 px-4 rounded transition-colors w-full uppercase text-sm tracking-wide" href="tel:0772015138">
+          <span class="material-symbols-outlined">call</span>
+          Intervention immédiate
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white dark:bg-background-dark relative">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-20">
+      <span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-3 block">Nos prestations</span>
+      <h2 class="text-4xl md:text-5xl font-black text-navy-900 dark:text-white mb-6 uppercase tracking-tight">
+        Toiture · Charpente · Étanchéité
+      </h2>
+      <div class="w-24 h-1.5 bg-primary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Carte 1 : Toiture & rénovation -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">roofing</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">roofing</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Toiture & rénovation</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Pose, réparation, rénovation complète ou partielle. Entretien et nettoyage de toiture pour prolonger sa durée de vie.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9novation%20de%20toiture." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Carte 2 : Réparation de fuites -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">water_damage</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">water_damage</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Réparation de fuites</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Détection rapide d'infiltrations, bâchage d'urgence et reprise d'étanchéité. Intervention 24h/24.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9paration%20de%20fuites." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Carte 3 : Charpente & traitement -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">construction</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">construction</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Charpente & traitement</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Réparation, renforcement et traitement préventif contre les insectes et l'humidité.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20traitement%20de%20charpente." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Carte 4 : Étanchéité & isolation -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">waterproof</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">waterproof</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Étanchéité & isolation</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Pose de membranes d'étanchéité, isolation thermique et phonique pour toitures-terrasses et toits inclinés.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20l'%C3%A9tanch%C3%A9it%C3%A9%20et%20l'isolation." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Carte 5 : Zinguerie & gouttières -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">handyman</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">handyman</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Zinguerie & gouttières</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Pose et réparation de gouttières, chéneaux, noues et solins pour une évacuation optimale des eaux pluviales.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20zinguerie%20et%20goutti%C3%A8res." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Carte 6 : Démoussage & entretien -->
+      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">cleaning_services</span>
+        </div>
+        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">cleaning_services</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Démoussage & entretien</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          Nettoyage haute pression, traitement hydrofuge, élimination des mousses et lichens.
+        </p>
+        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20d%C3%A9moussage%20de%20toiture." target="_blank" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-navy-50 dark:bg-navy-900/50">
+  <div class="container mx-auto px-4 text-center">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-600 dark:text-navy-300 font-bold text-xs uppercase tracking-wide mb-8">
+      <span class="material-symbols-outlined text-sm text-primary">verified_user</span>
+      Notre réputation
+    </span>
+    <h2 class="text-2xl md:text-3xl font-black text-navy-900 dark:text-white mb-10 uppercase tracking-tight">
+      Ils nous font confiance
+    </h2>
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      <span class="text-3xl font-black text-yellow-600 flex items-center gap-1">★★★★★ <span class="text-xl text-navy-700 ml-2">5/5</span></span>
+    </div>
+    <p class="mt-8 text-xs text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">
+      Artisans qualifiés et assurés — devis gratuit et transparent pour tous vos projets de toiture, charpente ou étanchéité.
+    </p>
+  </div>
+</section>
+
+<section class="py-20 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center mb-16">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-navy-900 dark:text-white font-black text-2xl uppercase">Avis clients</span>
+        <div class="flex text-primary">
+          <span class="material-symbols-outlined text-2xl fill-current">star</span>
+          <span class="material-symbols-outlined text-2xl fill-current">star</span>
+          <span class="material-symbols-outlined text-2xl fill-current">star</span>
+          <span class="material-symbols-outlined text-2xl fill-current">star</span>
+          <span class="material-symbols-outlined text-2xl fill-current">star</span>
+        </div>
+      </div>
+      <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Basés sur nos avis Google</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
+        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
+        <div class="flex text-primary text-xs mb-6">
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+        </div>
+        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
+          "Intervention rapide pour une fuite après un orage. L'équipe a été très professionnelle et le diagnostic clair. Je recommande."
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">M</div>
+          <div>
+            <h4 class="font-bold text-base text-navy-900 dark:text-white">Marc D.</h4>
+            <span class="text-xs text-slate-400 uppercase tracking-wide">Trouy</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
+        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
+        <div class="flex text-primary text-xs mb-6">
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+        </div>
+        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
+          "Rénovation complète de ma toiture. Chantier propre, délais respectés, résultat impeccable. Entreprise sérieuse et transparente."
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">S</div>
+          <div>
+            <h4 class="font-bold text-base text-navy-900 dark:text-white">Sophie L.</h4>
+            <span class="text-xs text-slate-400 uppercase tracking-wide">Bourges</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
+        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
+        <div class="flex text-primary text-xs mb-6">
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+          <span class="material-symbols-outlined text-sm fill-current">star</span>
+        </div>
+        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
+          "Très bon travail pour le démoussage et le traitement de ma toiture. Prix très correct et conseils avisés. Je ferai appel à eux pour mes gouttières."
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">P</div>
+          <div>
+            <h4 class="font-bold text-base text-navy-900 dark:text-white">Pierre M.</h4>
+            <span class="text-xs text-slate-400 uppercase tracking-wide">Nevers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy-900 text-white border-t border-navy-800 pt-20 pb-10">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-16 border-b border-navy-800 pb-16">
+      <div class="flex items-center gap-4 mb-8 md:mb-0">
+        <img src="https://i.imgur.com/9uaatUV.png" alt="Rénove Tout 18 couvreur" class="h-12 w-auto">
+        <div class="flex flex-col leading-tight">
+          <span class="text-white font-extrabold text-xl uppercase tracking-tight">Rénove Tout 18</span>
+          <span class="text-primary text-xs font-bold uppercase tracking-wider">couvreur</span>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="text-right hidden md:block">
+          <span class="block text-slate-400 text-sm font-medium">Urgence fuite ?</span>
+          <span class="block text-white font-bold">Intervention 24h/7j</span>
+        </div>
+        <a class="bg-primary hover:bg-primary-dark transition-colors text-white font-bold py-4 px-8 rounded shadow-glow flex items-center gap-3" href="tel:0772015138">
+          <span class="material-symbols-outlined text-xl">call</span>
+          07 72 01 51 38
+        </a>
+      </div>
+    </div>
+    <h3 class="text-center text-lg font-bold text-white mb-4 uppercase tracking-wider">Zones d'intervention</h3>
+    <p class="text-center text-slate-400 text-sm mb-12 max-w-2xl mx-auto">Rayon d'action : Cher, Nièvre et Centre-Val de Loire</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 gap-x-6 text-xs text-slate-400 max-w-6xl mx-auto mb-16">
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Bourges (18000)</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Trouy (18570)</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Nevers (58000)</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Saint-Doulchard</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Mehun-sur-Yèvre</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Vierzon</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Saint-Amand-Montrond</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Aubigny-sur-Nère</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Sancerre</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Cosne-Cours-sur-Loire</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> La Charité-sur-Loire</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Pouilly-sur-Loire</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Avord</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Chârost</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Levet</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Dun-sur-Auron</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Sancoins</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Henrichemont</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Menetou-Salon</div>
+      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Vignoux-sur-Barangeon</div>
+    </div>
+    <div class="text-center text-xs text-slate-600 border-t border-navy-800 pt-8">
+      <p>© 2025 Rénove Tout 18 (18). Tous droits réservés. Mentions légales - Politique de confidentialité.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

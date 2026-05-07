@@ -21,38 +21,34 @@
 
   <!-- Conversion : Appel téléphonique -->
   <script>
-  function gtag_report_conversion_call(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-18110118802/vkH4CO---qQcEJL3ybtD',
-        'value': 1.0,
-        'currency': 'EUR',
-        'event_callback': callback
-    });
-    return false;
-  }
+    function gtag_report_conversion_call(phoneNumber) {
+      // Ouvre le lien téléphonique immédiatement
+      window.location.href = 'tel:' + phoneNumber;
+      // Envoie la conversion en parallèle (sans callback)
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18110118802/vkH4CO---qQcEJL3ybtD',
+          'value': 1.0,
+          'currency': 'EUR'
+      });
+      // Empêche le comportement par défaut du href (qui ne serait de toute façon pas exécuté sur mobile)
+      return false;
+    }
   </script>
 
   <!-- Conversion : WhatsApp -->
   <script>
-  function gtag_report_conversion_whatsapp(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.open(url, '_blank');
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-18110118802/SrsCCJvI-qQcEJL3ybtD',
-        'value': 1.0,
-        'currency': 'EUR',
-        'event_callback': callback
-    });
-    return false;
-  }
+    function gtag_report_conversion_whatsapp(whatsappUrl) {
+      // Ouvre l'URL WhatsApp dans un nouvel onglet
+      window.open(whatsappUrl, '_blank');
+      // Envoie la conversion
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18110118802/SrsCCJvI-qQcEJL3ybtD',
+          'value': 1.0,
+          'currency': 'EUR'
+      });
+      // Empêche l'ouverture du lien via l'attribut href (évite double ouverture)
+      return false;
+    }
   </script>
 
   <script>
@@ -124,11 +120,11 @@
         <span class="text-primary text-xs font-bold uppercase tracking-wider">couvreur</span>
       </div>
     </div>
-    <a class="hidden md:flex bg-white hover:bg-gray-100 transition-colors duration-300 text-navy-900 font-black py-3 px-6 rounded items-center gap-2 group border-2 border-transparent hover:border-primary" href="tel:0772015138" onclick="return gtag_report_conversion_call('tel:0772015138');">
+    <a class="hidden md:flex bg-white hover:bg-gray-100 transition-colors duration-300 text-navy-900 font-black py-3 px-6 rounded items-center gap-2 group border-2 border-transparent hover:border-primary" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
       <span class="material-symbols-outlined text-2xl text-primary group-hover:rotate-12 transition-transform">call</span>
       07 72 01 51 38
     </a>
-    <a class="md:hidden bg-primary text-white p-2 rounded-md shadow-lg" href="tel:0772015138" onclick="return gtag_report_conversion_call('tel:0772015138');">
+    <a class="md:hidden bg-primary text-white p-2 rounded-md shadow-lg" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
       <span class="material-symbols-outlined">call</span>
     </a>
   </div>
@@ -153,7 +149,7 @@
     <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
       <div class="relative group w-full md:w-auto">
         <div class="pulse-ring bg-primary rounded"></div>
-        <a class="relative flex items-center justify-center gap-4 bg-primary hover:bg-primary-dark transition-all text-white text-xl md:text-2xl font-bold py-5 px-12 rounded shadow-glow hover:shadow-orange-600/50 hover:-translate-y-1 w-full md:w-auto" href="tel:0772015138" onclick="return gtag_report_conversion_call('tel:0772015138');">
+        <a class="relative flex items-center justify-center gap-4 bg-primary hover:bg-primary-dark transition-all text-white text-xl md:text-2xl font-bold py-5 px-12 rounded shadow-glow hover:shadow-orange-600/50 hover:-translate-y-1 w-full md:w-auto" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
           <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
           APPELER MAINTENANT
         </a>
@@ -248,7 +244,7 @@
         <p class="text-slate-600 dark:text-slate-400 mb-8">
           Une fuite peut causer des dégâts importants. Nous intervenons 7j/7 pour bâchage temporaire et réparation dans les plus brefs délais.
         </p>
-        <a class="flex items-center justify-center gap-2 text-white bg-navy-900 hover:bg-primary font-bold py-3 px-4 rounded transition-colors w-full uppercase text-sm tracking-wide" href="tel:0772015138" onclick="return gtag_report_conversion_call('tel:0772015138');">
+        <a class="flex items-center justify-center gap-2 text-white bg-navy-900 hover:bg-primary font-bold py-3 px-4 rounded transition-colors w-full uppercase text-sm tracking-wide" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
           <span class="material-symbols-outlined">call</span>
           Intervention immédiate
         </a>
@@ -480,7 +476,7 @@
           <span class="block text-slate-400 text-sm font-medium">Urgence fuite ?</span>
           <span class="block text-white font-bold">Intervention 24h/7j</span>
         </div>
-        <a class="bg-primary hover:bg-primary-dark transition-colors text-white font-bold py-4 px-8 rounded shadow-glow flex items-center gap-3" href="tel:0772015138" onclick="return gtag_report_conversion_call('tel:0772015138');">
+        <a class="bg-primary hover:bg-primary-dark transition-colors text-white font-bold py-4 px-8 rounded shadow-glow flex items-center gap-3" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
           <span class="material-symbols-outlined text-xl">call</span>
           07 72 01 51 38
         </a>

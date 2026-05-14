@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Rénove Tout 18 couvreur - Toiture, Charpente & Zinguerie</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COUVREUR VIERZON & BOURGES | Couverture, Zinguerie dans le Cher (18) - Devis gratuit</title>
+  <meta name="description" content="Expert en couverture à Vierzon (18100) et Bourges (18000) et dans tout le Cher : toiture ardoise, tuile, charpente, zinguerie, démoussage, isolation. Devis gratuit, intervention rapide 24h/24.">
 
-  <!-- Google Ads Global Site Tag -->
+  <!-- Google Ads Global Site Tag (récupéré de l'ancienne version) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18110118802"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18110118802');
-  </script>
 
-  <!-- Conversion : Appel téléphonique -->
-  <script>
+    // Conversion : Appel téléphonique (récupéré de l'ancienne version)
     function gtag_report_conversion_call(phoneNumber) {
-      // Ouvre le lien téléphonique immédiatement
       window.location.href = 'tel:' + phoneNumber;
-      // Envoie la conversion en parallèle (sans callback)
       gtag('event', 'conversion', {
           'send_to': 'AW-18110118802/vkH4CO---qQcEJL3ybtD',
           'value': 1.0,
           'currency': 'EUR'
       });
-      // Empêche le comportement par défaut du href (qui ne serait de toute façon pas exécuté sur mobile)
       return false;
     }
-  </script>
 
-  <!-- Conversion : WhatsApp -->
-  <script>
+    // Conversion : WhatsApp (récupéré de l'ancienne version)
     function gtag_report_conversion_whatsapp(whatsappUrl) {
-      // Ouvre l'URL WhatsApp dans un nouvel onglet
       window.open(whatsappUrl, '_blank');
-      // Envoie la conversion
       gtag('event', 'conversion', {
           'send_to': 'AW-18110118802/SrsCCJvI-qQcEJL3ybtD',
           'value': 1.0,
           'currency': 'EUR'
       });
-      // Empêche l'ouverture du lien via l'attribut href (évite double ouverture)
       return false;
     }
   </script>
+
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
     tailwind.config = {
@@ -57,460 +50,471 @@
       theme: {
         extend: {
           colors: {
-            primary: "#FF4500",
-            "primary-dark": "#CC3700", 
-            navy: {
-              500: "#334155",
-              700: "#1E293B",
-              800: "#0F172A",
-              900: "#020617",
-            },
-            "background-light": "#F1F5F9",
-            "background-dark": "#0B0F19",
-            "surface-light": "#FFFFFF",
-            "surface-dark": "#151B2B",
+            primary: "#0070a8",
+            "primary-dark": "#005a88",
+            "primary-light": "#E6F3FA",
+            "secondary-bg": "#F5F5F5",
+            "background-light": "#FFFFFF",
+            "background-dark": "#111827",
+            "surface-light": "#F9FAFB",
+            "surface-dark": "#1F2937",
+            "text-light": "#2C2C2C",
+            "text-dark": "#F3F4F6",
+            "text-muted-light": "#4B5563",
+            "text-muted-dark": "#9CA3AF",
+            charcoal: "#2C2C2C",
           },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-          },
+          fontFamily: { display: ["Inter","sans-serif"], body: ["Inter","sans-serif"] },
           boxShadow: {
-            'glow': '0 0 25px rgba(255, 69, 0, 0.4)',
-            'card-hover': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
-          }
+            soft: "0 4px 20px -2px rgba(0,0,0,0.05)",
+            card: "0 2px 10px rgba(0,0,0,0.06)",
+            cta: "0 10px 30px rgba(0,112,168,0.4)",
+            glow: "0 0 20px rgba(0,112,168,0.3)",
+          },
+          animation: { "pulse-slow":"pulse 3s cubic-bezier(0.4,0,0.6,1) infinite", "float":"float 3s ease-in-out infinite" },
+          keyframes: { float: { "0%,100%":{ transform:"translateY(0px)" }, "50%":{ transform:"translateY(-10px)" } } },
         },
       },
     };
   </script>
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .pulse-ring {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: inherit;
-      border-radius: inherit;
-      opacity: 0.8;
-      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-      z-index: -1;
-    }
-    @keyframes pulse-ring {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 0; }
-      100% { transform: scale(0.95); opacity: 0; }
-    }
-    .hero-pattern {
-      background-color: #0F172A;
-      background-image: linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617), linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77), linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77);
-      background-size: 40px 70px;
-      background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
-    }
+    body { font-family:'Inter',sans-serif; color:#2C2C2C; scroll-behavior:smooth; }
+    .hero-gradient { background: radial-gradient(circle at center, #0099d6 0%, #0070a8 60%, #005a88 100%); }
+    .glass-card { background:rgba(255,255,255,0.15); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.3); }
+    .btn-cta { background:linear-gradient(135deg,#0070a8 0%,#005a88 100%); box-shadow:0 10px 30px rgba(0,112,168,0.4); transition:all 0.3s ease; }
+    .btn-cta:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 15px 40px rgba(0,112,168,0.5); }
+    .btn-whatsapp { background:linear-gradient(135deg,#25D366 0%,#128C7E 100%); box-shadow:0 10px 30px rgba(37,211,102,0.4); transition:all 0.3s ease; }
+    .btn-whatsapp:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 15px 40px rgba(37,211,102,0.5); }
+    .btn-secondary { background:#2C2C2C; transition:all 0.3s ease; }
+    .btn-secondary:hover { background:#1F1F1F; transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .shine-effect { position:relative; overflow:hidden; }
+    .shine-effect::after { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,0.4) 50%,transparent 70%); transform:rotate(45deg) translateX(-100%); transition:transform 0.6s; }
+    .shine-effect:hover::after { transform:rotate(45deg) translateX(100%); }
+    .comparison-slider { position:relative; width:100%; overflow:hidden; border-radius:1.5rem; box-shadow:0 25px 50px -12px rgba(0,0,0,0.25); }
+    .comparison-slider img { display:block; width:100%; height:350px; object-fit:cover; }
+    .comparison-slider .after { position:absolute; top:0; left:0; width:100%; height:100%; clip-path:inset(0 0 0 50%); }
+    .comparison-slider .divider { position:absolute; top:0; left:50%; width:4px; height:100%; background:white; transform:translateX(-50%); cursor:ew-resize; box-shadow:0 0 20px rgba(0,0,0,0.5); z-index:10; }
+    .comparison-slider .divider::after { content:'\f337'; font-family:'Font Awesome 6 Free'; font-weight:900; position:absolute; top:50%; left:50%; width:50px; height:50px; background:white; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 4px 20px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; color:#0070a8; font-size:1.2rem; }
+    .popup-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.8); backdrop-filter:blur(5px); z-index:200; display:none; align-items:center; justify-content:center; padding:1rem; }
+    .popup-overlay.active { display:flex; animation:fadeIn 0.3s ease; }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    .sticky-cta { position:fixed; bottom:0; left:0; right:0; z-index:100; transform:translateY(100%); transition:transform 0.3s ease; }
+    .sticky-cta.visible { transform:translateY(0); }
+    .faq-content { max-height:0; overflow:hidden; transition:max-height 0.3s ease,padding 0.3s ease; }
+    .faq-content.open { max-height:500px; }
+    .floating-cta { position:fixed; right:20px; bottom:140px; z-index:99; display:flex; flex-direction:column; gap:10px; }
+    .floating-btn { width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:all 0.3s ease; animation:float-btn 3s ease-in-out infinite; }
+    .floating-btn:hover { transform:scale(1.1); }
+    @keyframes float-btn { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+    .confetti { position:fixed; width:10px; height:10px; background:#0070a8; animation:confetti-fall 3s linear forwards; z-index:9998; }
+    @keyframes confetti-fall { 0%{transform:translateY(-100vh) rotate(0deg);opacity:1} 100%{transform:translateY(100vh) rotate(720deg);opacity:0} }
+    .phone-pulse { animation:phone-pulse 2s ease-in-out infinite; }
+    @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,112,168,0.7)} 50%{box-shadow:0 0 0 15px rgba(0,112,168,0)} }
+    .reveal { opacity:0; transform:translateY(30px); transition:all 0.6s ease; }
+    .reveal.active { opacity:1; transform:translateY(0); }
   </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-gray-100 antialiased selection:bg-primary selection:text-white">
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
 
-<!-- Header -->
-<header class="bg-black py-5 border-b border-navy-700 sticky top-0 z-50">
+<!-- HEADER -->
+<header class="bg-white dark:bg-surface-dark py-3 shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
-      <a href="#" class="block">
-        <img src="https://i.imgur.com/9uaatUV.png" alt="Rénove Tout 18 couvreur" class="h-12 w-auto">
-      </a>
-      <div class="flex flex-col leading-tight">
-        <span class="text-white font-extrabold text-xl uppercase tracking-tight">Rénove Tout 18</span>
-        <span class="text-primary text-xs font-bold uppercase tracking-wider">couvreur</span>
+      <div class="flex items-center gap-2 text-charcoal dark:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0070a8" stroke-width="1.5" width="28" height="28" class="inline-block">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span class="font-bold text-xl">COUVREUR VIERZON & BOURGES</span>
       </div>
     </div>
-    <a class="hidden md:flex bg-white hover:bg-gray-100 transition-colors duration-300 text-navy-900 font-black py-3 px-6 rounded items-center gap-2 group border-2 border-transparent hover:border-primary" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
-      <span class="material-symbols-outlined text-2xl text-primary group-hover:rotate-12 transition-transform">call</span>
+    <a href="tel:0772015138"
+       onclick="return gtag_report_conversion_call('0772015138');"
+       class="bg-white hover:bg-gray-100 text-charcoal border-2 border-primary font-bold py-2 px-6 rounded-full flex items-center gap-2 transition-transform transform hover:scale-105 shadow-lg">
+      <span class="material-icons text-sm text-primary">phone</span>
       07 72 01 51 38
-    </a>
-    <a class="md:hidden bg-primary text-white p-2 rounded-md shadow-lg" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
-      <span class="material-symbols-outlined">call</span>
     </a>
   </div>
 </header>
 
-<section class="hero-pattern relative pt-20 pb-36 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-navy-900/80 to-navy-900/95"></div>
-  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
-  <div class="container mx-auto px-4 relative z-10 text-center">
-    <div class="inline-flex items-center gap-2 bg-navy-800/80 backdrop-blur-sm border border-navy-600 text-white rounded-full px-5 py-2 text-xs font-bold uppercase tracking-wider mb-8 shadow-xl">
-      <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-      URGENCE FUITE 24h/24 · 7j/7 · INTERVENTION RAPIDE
+<!-- HERO -->
+<section class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:20px 20px;"></div>
+  <div class="container mx-auto px-4 text-center relative z-10">
+    <div class="inline-flex items-center gap-1 bg-charcoal/20 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 border border-white/30 text-white">
+      <span class="material-symbols-outlined text-sm">schedule</span>
+      INTERVENTION 24H/24 & 7J/7 – VIERZON (18100), BOURGES (18000) ET TOUT LE CHER
     </div>
-    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-tight">
-      COUVREUR À BOURGES <br/>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">RÉNOVATION & URGENCE</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-sm">
+      Couverture & Zinguerie <br/><span class="underline decoration-4 decoration-white">artisan près de chez vous</span>
     </h1>
-    <p class="text-lg md:text-xl text-slate-300 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
-      Spécialiste en toiture, charpente et étanchéité dans le Cher et ses environs. <br class="hidden md:block"/>
-      Interventions pour particuliers et professionnels — <span class="text-white font-bold border-b border-primary/50">devis gratuit et transparent</span>.
+    <div class="inline-block bg-charcoal text-white font-bold text-lg px-6 py-2 rounded-lg shadow-md mb-6 transform -rotate-1 border border-charcoal">
+      DEVIS GRATUIT SANS ENGAGEMENT
+    </div>
+    <p class="text-lg md:text-xl font-medium mb-6 max-w-2xl mx-auto opacity-95 text-white">
+      Toiture ardoise, tuile, charpente, zinguerie, démoussage et isolation.<br/>
+      Artisan couvreur professionnel – Devis gratuit – Intervention rapide à Vierzon, Bourges et leurs environs.
     </p>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
-      <div class="relative group w-full md:w-auto">
-        <div class="pulse-ring bg-primary rounded"></div>
-        <a class="relative flex items-center justify-center gap-4 bg-primary hover:bg-primary-dark transition-all text-white text-xl md:text-2xl font-bold py-5 px-12 rounded shadow-glow hover:shadow-orange-600/50 hover:-translate-y-1 w-full md:w-auto" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
-          <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
-          APPELER MAINTENANT
-        </a>
+    <div class="flex flex-col items-center justify-center gap-4 mb-6">
+      <a class="bg-white text-charcoal hover:bg-gray-50 text-2xl md:text-3xl font-bold py-4 px-10 rounded-full shadow-xl flex items-center gap-3 transition-transform hover:-translate-y-1 ring-4 ring-white/30"
+         href="tel:0772015138"
+         onclick="return gtag_report_conversion_call('0772015138');">
+        <span class="material-symbols-outlined text-primary">phone_in_talk</span>
+        07 72 01 51 38
+      </a>
+      <div class="flex items-center gap-2 text-sm font-medium bg-charcoal/30 text-white px-4 py-1 rounded-full backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Disponible 24h/24 et 7j/7 – Secteur Cher (18)
       </div>
-      <!-- BOUTON DEVIS GRATUIT -->
-      <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20gratuit." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20gratuit.');" class="flex flex-col items-center md:items-start bg-green-600 hover:bg-green-700 p-3 rounded border border-green-700 backdrop-blur-sm transition-all duration-300 cursor-pointer shadow-lg">
-        <span class="text-white font-bold text-lg uppercase tracking-wide flex items-center gap-2">
-          <span class="material-symbols-outlined text-white">description</span>
-          Devis Gratuit
-        </span>
-        <span class="text-green-100 text-xs mt-0.5">Réponse sous 24h</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mt-8">
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white"><span class="material-symbols-outlined text-3xl mb-2">verified_user</span><h3 class="font-bold">Artisan certifié</h3><p class="text-sm opacity-90">Couvreur qualifié RGE</p></div>
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white"><span class="material-symbols-outlined text-3xl mb-2">thumb_up</span><h3 class="font-bold">Satisfaction totale</h3><p class="text-sm opacity-90">+500 clients conquis</p></div>
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white"><i class="fas fa-ruler-combined text-3xl mb-2"></i><h3 class="font-bold">Sur mesure</h3><p class="text-sm opacity-90">Réalisation et pose personnalisées</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOS SERVICES -->
+<section class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white mb-3">🔨 Nos <span class="text-primary">services de couverture</span></h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">De l'entretien à la pose complète, nous réalisons tous vos projets de toiture sur mesure à Vierzon, Bourges et dans tout le Cher.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-home text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Toiture ardoise / tuile</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Pose neuve ou rénovation</li><li>Ardoise naturelle ou synthétique</li><li>Tuiles plates ou mécaniques</li><li>Étanchéité garantie</li></ul></div>
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-tree text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Charpente traditionnelle</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Fermettes, portiques</li><li>Traitement anti-parasitaire</li><li>Renforcement de structure</li><li>Bois massif ou lamellé-collé</li></ul></div>
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-water text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Zinguerie / gouttières</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Gouttières, chéneaux</li><li>Rives, bandeaux, descentes</li><li>Zinc, aluminium, cuivre</li><li>Protection anti-feuilles</li></ul></div>
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-shower text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Démoussage / Traitement</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Nettoyage toiture en douceur</li><li>Traitement anti-mousse</li><li>Hydrofugation</li><li>Protection longue durée</li></ul></div>
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-temperature-high text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Isolation des combles</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Laine de verre, ouate de cellulose</li><li>Isolation par l'extérieur</li><li>Économie d'énergie</li><li>Aides financières (MaPrimeRénov')</li></ul></div>
+      <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-card"><i class="fas fa-tools text-primary text-3xl mb-4"></i><h3 class="font-bold text-xl mb-2">Dépannage & réparation</h3><ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc pl-4"><li>Fuites, infiltrations</li><li>Tuiles cassées ou déplacées</li><li>Intervention d'urgence 24h/24</li><li>Devis transparent</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉALISATIONS & FINITIONS -->
+<section class="py-16 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white mb-3">🎯 Nos <span class="text-primary">prestations</span> sur mesure</h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">De la conception à la pose, nous vous accompagnons dans tous vos projets de couverture dans le département du Cher.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-pencil-ruler text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Conseil et étude</h3><p class="text-sm text-gray-600 dark:text-gray-400">Nous étudions vos besoins et réalisons une étude technique avant tout travaux à Vierzon ou Bourges.</p></div>
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-industry text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Matériaux de qualité</h3><p class="text-sm text-gray-600 dark:text-gray-400">Ardoises, tuiles, zinc : nous sélectionnons des matériaux durables et esthétiques.</p></div>
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-truck-fast text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Approvisionnement & pose</h3><p class="text-sm text-gray-600 dark:text-gray-400">Nous gérons le chantier de A à Z à Vierzon, Bourges et toutes les communes environnantes.</p></div>
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-shield-alt text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Étanchéité garantie</h3><p class="text-sm text-gray-600 dark:text-gray-400">Respect des normes et des DTU pour une couverture fiable et étanche.</p></div>
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-paint-roller text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Finition soignée</h3><p class="text-sm text-gray-600 dark:text-gray-400">Faîtage, rives, solins, joints : des finitions impeccables pour votre toiture.</p></div>
+      <div class="bg-white dark:bg-surface-dark border rounded-2xl p-6 shadow-card"><i class="fas fa-clock text-primary text-2xl mb-3"></i><h3 class="font-bold text-lg">Intervention rapide</h3><p class="text-sm text-gray-600 dark:text-gray-400">Disponible 24h/24 et 7j/7 pour les urgences (fuites, tempête) dans le Cher.</p></div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#"
+         onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20projet%20de%20couverture.%20Je%20suis%20situ%C3%A9%20%C3%A0%20Vierzon%20ou%20Bourges%20(ou%20environs).'); return false;"
+         class="btn-secondary text-white font-bold py-4 px-8 rounded-2xl inline-flex items-center gap-2 shine-effect">
+        <span class="material-symbols-outlined">description</span> Demander un devis personnalisé
       </a>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
-        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">shield</span>
-        </div>
-        <div class="text-left">
-          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">Garantie décennale</h3>
-          <p class="text-slate-400 text-sm font-medium">Artisans assurés</p>
-        </div>
+  </div>
+</section>
+
+<!-- AVANT/APRÈS -->
+<section id="realisations" class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white mb-3">Nos <span class="text-primary">réalisations</span></h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">Déplacez le curseur pour voir la transformation de toitures dans le Cher</p>
+    </div>
+    <div class="max-w-4xl mx-auto reveal">
+      <div class="comparison-slider" id="comparison-slider">
+        <img src="https://i.imgur.com/sFFLwvv.jpeg" alt="Avant couverture" class="before">
+        <div class="after"><img src="https://i.imgur.com/2Hh2F0o.jpeg" alt="Après couverture"></div>
+        <div class="divider" id="divider"></div>
       </div>
-      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
-        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">engineering</span>
-        </div>
-        <div class="text-left">
-          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">Savoir‑faire artisanal</h3>
-          <p class="text-slate-400 text-sm font-medium">Équipe qualifiée</p>
-        </div>
-      </div>
-      <div class="bg-navy-800 border border-navy-700 p-6 rounded flex items-center gap-5 hover:border-primary transition-all duration-300 group shadow-lg">
-        <div class="bg-navy-900 p-3 rounded group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white">schedule</span>
-        </div>
-        <div class="text-left">
-          <h3 class="font-extrabold text-white text-lg uppercase tracking-tight">24h/7j</h3>
-          <p class="text-slate-400 text-sm font-medium">Intervention rapide</p>
-        </div>
+      <div class="text-center mt-10">
+        <a href="#"
+           onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20projet%20de%20couverture%20%C3%A0%20Vierzon%20ou%20Bourges.'); return false;"
+           class="btn-cta text-white px-8 py-4 rounded-2xl font-bold inline-flex items-center gap-2 shine-effect">
+          <span class="material-symbols-outlined">description</span> Demander un devis gratuit
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-20 bg-background-light dark:bg-background-dark -mt-10 relative z-20 rounded-t-3xl border-t border-white/10">
+<!-- URGENCE / RÉACTIVITÉ -->
+<section class="relative overflow-hidden py-16 bg-charcoal text-white">
+  <div class="container mx-auto px-4 relative z-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-primary/20 rounded-full px-4 py-2 mb-6"><i class="fas fa-stopwatch text-primary"></i><span class="font-bold">INTERVENTION RAPIDE - 24H/24 7J/7</span></div>
+    <h2 class="text-3xl md:text-5xl font-black mb-4">Un projet de couverture ?<br><span class="text-primary text-2xl md:text-3xl">Intervention à Vierzon, Bourges et tout le Cher (18) ⚡</span></h2>
+    <p class="text-xl mb-6 text-gray-200">+500 clients satisfaits – Devis gratuit – Artisan couvreur certifié RGE</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:0772015138"
+         onclick="return gtag_report_conversion_call('0772015138');"
+         class="bg-white text-charcoal px-8 py-4 rounded-2xl font-bold text-xl flex items-center gap-3 hover:scale-105 transition shadow-2xl phone-pulse">
+        <i class="fas fa-phone-alt"></i>07 72 01 51 38
+      </a>
+      <a href="#"
+         onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20devis%20pour%20un%20projet%20de%20couverture%20dans%20le%20Cher%20(Vierzon%20ou%20Bourges).'); return false;"
+         class="btn-whatsapp text-white px-8 py-4 rounded-2xl font-bold text-xl flex items-center gap-3 hover:scale-105 transition">
+        <i class="fab fa-whatsapp"></i>WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS GOOGLE -->
+<section id="avis-section" class="py-16 bg-white dark:bg-background-dark">
   <div class="container mx-auto px-4">
-    <div class="bg-white dark:bg-surface-dark rounded-none md:rounded-lg p-8 md:p-12 shadow-2xl border border-gray-100 dark:border-navy-700 flex flex-col lg:flex-row gap-12 items-center relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-2 h-full bg-primary"></div>
-      <div class="flex-1 z-10">
-        <h2 class="text-3xl md:text-4xl font-black mb-6 text-navy-900 dark:text-white uppercase tracking-tight">Rénove Tout 18 couvreur</h2>
-        <p class="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed text-lg">
-          Entreprise spécialisée dans les travaux de toiture, la rénovation et les interventions d'urgence pour fuites. Nous intervenons rapidement dans un rayon couvrant Trouy, Nevers et toute la région Centre-Val de Loire. Artisans qualifiés, nous proposons des devis gratuits et un service transparent.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+    <div class="text-center mb-10 flex flex-col items-center">
+      <div class="flex items-center gap-2 mb-2">
+        <i class="fab fa-google text-primary text-2xl"></i>
+        <span class="text-xl font-bold text-charcoal dark:text-white">Avis Google</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-primary">4.8</span>
+        <div class="flex text-primary text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <span class="text-sm text-gray-500">(120+ avis)</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow-sm bg-white dark:bg-surface-dark">
+        <div class="flex justify-between items-start mb-4"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center text-white font-bold">C</div><div><div class="font-bold text-sm">Claire M.</div></div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-4">"Toiture ardoise posée avec une finition impeccable. Professionnel et réactif à Bourges."</p>
+        <div class="text-xs text-green-600 flex items-center gap-1"><span class="material-symbols-outlined text-xs">check_circle</span> Avis vérifié</div>
+      </div>
+      <div class="border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow-sm bg-white dark:bg-surface-dark">
+        <div class="flex justify-between items-start mb-4"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center text-white font-bold">J</div><div><div class="font-bold text-sm">Jean-Philippe D.</div></div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-4">"Charpente et zinguerie refaites à neuf à Vierzon : travail soigné et équipe sympathique. Vivement recommandé."</p>
+        <div class="text-xs text-green-600 flex items-center gap-1"><span class="material-symbols-outlined text-xs">check_circle</span> Avis vérifié</div>
+      </div>
+      <div class="border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow-sm bg-white dark:bg-surface-dark">
+        <div class="flex justify-between items-start mb-4"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center text-white font-bold">S</div><div><div class="font-bold text-sm">Sophie L.</div></div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-4">"Démoussage et hydrofugation de ma toiture : résultat bluffant, ma maison a l'air neuve. Intervention rapide dans le Cher."</p>
+        <div class="text-xs text-green-600 flex items-center gap-1"><span class="material-symbols-outlined text-xs">check_circle</span> Avis vérifié</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white">Questions <span class="text-primary">fréquentes</span> 🏠</h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark">Couverture, charpente, zinguerie – toutes les réponses pour Vierzon et Bourges.</p>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>🏠 Quels types de toiture proposez-vous dans le Cher ?</span><span class="material-symbols-outlined transition-transform duration-300">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Nous travaillons l'ardoise (naturelle et synthétique), la tuile (plate, mécanique, canal), le zinc à tasseaux ou à joint debout, ainsi que les toitures-terrasses avec étanchéité. Intervention à Vierzon, Bourges et tout le département 18.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>📅 Comment obtenir un devis gratuit à Vierzon ou Bourges ?</span><span class="material-symbols-outlined transition-transform duration-300">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Appelez-nous au 07 72 01 51 38 ou utilisez le formulaire ci-dessous. Nous intervenons rapidement pour un devis détaillé sans engagement.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>📍 Intervenez-vous uniquement à Vierzon et Bourges ?</span><span class="material-symbols-outlined transition-transform duration-300">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Nous couvrons tout le Cher : Vierzon (18100), Bourges (18000), mais aussi Saint-Doulchard, Mehun-sur-Yèvre, Aubigny-sur-Nère, Graçay, et toutes les communes environnantes. Contactez-nous pour vérifier notre disponibilité.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>📋 Proposez-vous un service d'urgence pour fuites de toiture ?</span><span class="material-symbols-outlined transition-transform duration-300">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Oui, nous sommes disponibles 24h/24 et 7j/7 pour les urgences (fuites, infiltrations, dégâts de tempête). Appelez-nous directement au 07 72 01 51 38.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold mb-4"><span class="material-symbols-outlined text-sm">send</span>CONTACT RAPIDE</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Besoin d'un <span class="text-primary">devis couverture</span> à Vierzon ou Bourges ?</h2>
+        <p class="text-text-muted-light dark:text-gray-400 mb-6">Remplissez le formulaire et nous vous répondons sous <strong class="text-primary">15 minutes</strong>.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white"><i class="fas fa-phone"></i></div>
             <div>
-              <span class="font-bold text-navy-900 dark:text-white block text-lg">Devis gratuit</span>
-              <span class="text-sm text-slate-500 dark:text-slate-400">Sans engagement</span>
+              <div class="text-sm text-gray-500">Appelez-nous</div>
+              <a href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');" class="font-bold text-xl hover:text-primary transition">07 72 01 51 38</a>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white"><i class="fab fa-whatsapp"></i></div>
             <div>
-              <span class="font-bold text-navy-900 dark:text-white block text-lg">Intervention rapide</span>
-              <span class="text-sm text-slate-500 dark:text-slate-400">Même le week‑end</span>
+              <div class="text-sm text-gray-500">WhatsApp</div>
+              <a href="#" onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20projet%20de%20couverture%20dans%20le%20Cher%20(Vierzon%20ou%20Bourges).'); return false;" class="font-bold text-xl hover:text-green-600 transition">07 72 01 51 38</a>
             </div>
           </div>
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
-            <div>
-              <span class="font-bold text-navy-900 dark:text-white block text-lg">Artisans qualifiés</span>
-              <span class="text-sm text-slate-500 dark:text-slate-400">Expérience et sérieux</span>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-0.5 text-2xl">check_box</span>
-            <div>
-              <span class="font-bold text-navy-900 dark:text-white block text-lg">Service transparent</span>
-              <span class="text-sm text-slate-500 dark:text-slate-400">Prix clairs et précis</span>
-            </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center text-white"><i class="fas fa-envelope"></i></div>
+            <div><div class="text-sm text-gray-500">Email</div><div class="font-bold text-xl">renovetout18@gmail.com</div></div>
           </div>
         </div>
       </div>
-      <div class="w-full lg:w-1/3 bg-navy-50 dark:bg-navy-900 p-10 border border-gray-200 dark:border-navy-700 relative group hover:border-primary/30 transition-colors">
-        <div class="absolute -top-3 left-8 bg-primary text-white px-3 py-1 text-xs font-bold uppercase tracking-widest">Urgence 24h/24</div>
-        <h3 class="font-bold text-navy-900 dark:text-white text-xl mb-4 flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary">water_drop</span>
-          Fuite ou infiltration ?
-        </h3>
-        <p class="text-slate-600 dark:text-slate-400 mb-8">
-          Une fuite peut causer des dégâts importants. Nous intervenons 7j/7 pour bâchage temporaire et réparation dans les plus brefs délais.
-        </p>
-        <a class="flex items-center justify-center gap-2 text-white bg-navy-900 hover:bg-primary font-bold py-3 px-4 rounded transition-colors w-full uppercase text-sm tracking-wide" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
-          <span class="material-symbols-outlined">call</span>
-          Intervention immédiate
-        </a>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl p-6 shadow-lg reveal">
+        <h3 class="text-xl font-bold mb-4 text-charcoal dark:text-white">Demande de devis express</h3>
+        <form id="contact-form" class="space-y-4" onsubmit="sendWhatsApp(event); return false;">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div><label class="block text-sm font-semibold mb-1">Prénom *</label><input id="prenom" type="text" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div>
+            <div><label class="block text-sm font-semibold mb-1">Nom *</label><input id="nom" type="text" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div>
+          </div>
+          <div><label class="block text-sm font-semibold mb-1">Téléphone *</label><input id="telephone" type="tel" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div>
+          <div><label class="block text-sm font-semibold mb-1">Email</label><input id="email" type="email" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20"></div>
+          <div><label class="block text-sm font-semibold mb-1">Type de prestation</label>
+            <select id="travaux" class="w-full px-4 py-2 rounded-xl border border-gray-300">
+              <option>Toiture ardoise / tuile</option>
+              <option>Charpente traditionnelle</option>
+              <option>Zinguerie / gouttières</option>
+              <option>Démoussage / nettoyage</option>
+              <option>Isolation des combles</option>
+              <option>Réparation de toiture</option>
+              <option>Autre projet</option>
+            </select>
+          </div>
+          <div><label class="block text-sm font-semibold mb-1">Message</label><textarea id="message" rows="3" class="w-full px-4 py-2 rounded-xl border border-gray-300" placeholder="Décrivez votre projet (surface, type de matériaux, localisation précise : Vierzon, Bourges ou autre commune du Cher)..."></textarea></div>
+          <button type="submit" class="w-full btn-cta text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2"><span class="material-symbols-outlined">send</span>Envoyer ma demande</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-24 bg-white dark:bg-background-dark relative">
+<!-- FOOTER -->
+<footer class="bg-surface-light dark:bg-gray-900 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-20">
-      <span class="text-primary font-black tracking-[0.2em] uppercase text-xs mb-3 block">Nos prestations</span>
-      <h2 class="text-4xl md:text-5xl font-black text-navy-900 dark:text-white mb-6 uppercase tracking-tight">
-        Toiture · Charpente · Étanchéité
-      </h2>
-      <div class="w-24 h-1.5 bg-primary mx-auto"></div>
+    <h3 class="text-xl font-bold text-center mb-2 text-charcoal dark:text-white">Zone d'intervention</h3>
+    <p class="text-center text-gray-500 text-sm mb-6">Vierzon (18100), Bourges (18000) et toutes les communes du Cher – Intervention 24h/24</p>
+    <div class="flex justify-center mb-8">
+      <a href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+        <span class="material-symbols-outlined text-sm">phone</span> Appeler maintenant
+      </a>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Carte 1 : Toiture & rénovation -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">roofing</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">roofing</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Toiture & rénovation</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Pose, réparation, rénovation complète ou partielle. Entretien et nettoyage de toiture pour prolonger sa durée de vie.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9novation%20de%20toiture." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9novation%20de%20toiture.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-      <!-- Carte 2 : Réparation de fuites -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">water_damage</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">water_damage</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Réparation de fuites</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Détection rapide d'infiltrations, bâchage d'urgence et reprise d'étanchéité. Intervention 24h/24.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9paration%20de%20fuites." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20r%C3%A9paration%20de%20fuites.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-      <!-- Carte 3 : Charpente & traitement -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">construction</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">construction</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Charpente & traitement</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Réparation, renforcement et traitement préventif contre les insectes et l'humidité.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20traitement%20de%20charpente." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20traitement%20de%20charpente.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-      <!-- Carte 4 : Étanchéité & isolation -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">waterproof</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">waterproof</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Étanchéité & isolation</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Pose de membranes d'étanchéité, isolation thermique et phonique pour toitures-terrasses et toits inclinés.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20l'%C3%A9tanch%C3%A9it%C3%A9%20et%20l'isolation." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20l\\'%C3%A9tanch%C3%A9it%C3%A9%20et%20l\\'isolation.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-      <!-- Carte 5 : Zinguerie & gouttières -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">handyman</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">handyman</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Zinguerie & gouttières</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Pose et réparation de gouttières, chéneaux, noues et solins pour une évacuation optimale des eaux pluviales.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20zinguerie%20et%20goutti%C3%A8res." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20la%20zinguerie%20et%20goutti%C3%A8res.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-      <!-- Carte 6 : Démoussage & entretien -->
-      <div class="group bg-surface-light dark:bg-surface-dark p-8 border-l-4 border-transparent hover:border-l-primary hover:border-t-0 hover:border-r-0 hover:border-b-0 border border-gray-200 dark:border-navy-700 shadow-sm hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-          <span class="material-symbols-outlined text-8xl text-primary">cleaning_services</span>
-        </div>
-        <div class="w-16 h-16 bg-navy-100 dark:bg-navy-800 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-          <span class="material-symbols-outlined text-navy-900 dark:text-white text-4xl group-hover:text-white transition-colors">cleaning_services</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-navy-900 dark:text-white">Démoussage & entretien</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-          Nettoyage haute pression, traitement hydrofuge, élimination des mousses et lichens.
-        </p>
-        <a href="https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20d%C3%A9moussage%20de%20toiture." target="_blank" onclick="return gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20d%C3%A9moussage%20de%20toiture.');" class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-          En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-4 max-w-5xl mx-auto text-sm text-gray-600 dark:text-gray-400">
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Vierzon (18100)</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Bourges (18000)</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Saint-Doulchard</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Mehun-sur-Yèvre</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Aubigny-sur-Nère</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Graçay</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Saint-Florent-sur-Cher</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xs">location_on</span>Lury-sur-Arnon</div>
     </div>
-  </div>
-</section>
-
-<section class="py-16 bg-navy-50 dark:bg-navy-900/50">
-  <div class="container mx-auto px-4 text-center">
-    <span class="inline-flex items-center gap-2 px-3 py-1 rounded border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-600 dark:text-navy-300 font-bold text-xs uppercase tracking-wide mb-8">
-      <span class="material-symbols-outlined text-sm text-primary">verified_user</span>
-      Notre réputation
-    </span>
-    <h2 class="text-2xl md:text-3xl font-black text-navy-900 dark:text-white mb-10 uppercase tracking-tight">
-      Ils nous font confiance
-    </h2>
-    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-      <span class="text-3xl font-black text-yellow-600 flex items-center gap-1">★★★★★ <span class="text-xl text-navy-700 ml-2">5/5</span></span>
-    </div>
-    <p class="mt-8 text-xs text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">
-      Artisans qualifiés et assurés — devis gratuit et transparent pour tous vos projets de toiture, charpente ou étanchéité.
-    </p>
-  </div>
-</section>
-
-<section class="py-20 bg-white dark:bg-background-dark">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col items-center mb-16">
-      <div class="flex items-center gap-3 mb-2">
-        <span class="text-navy-900 dark:text-white font-black text-2xl uppercase">Avis clients</span>
-        <div class="flex text-primary">
-          <span class="material-symbols-outlined text-2xl fill-current">star</span>
-          <span class="material-symbols-outlined text-2xl fill-current">star</span>
-          <span class="material-symbols-outlined text-2xl fill-current">star</span>
-          <span class="material-symbols-outlined text-2xl fill-current">star</span>
-          <span class="material-symbols-outlined text-2xl fill-current">star</span>
-        </div>
-      </div>
-      <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Basés sur nos avis Google</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
-        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
-        <div class="flex text-primary text-xs mb-6">
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-        </div>
-        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
-          "Intervention rapide pour une fuite après un orage. L'équipe a été très professionnelle et le diagnostic clair. Je recommande."
-        </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">M</div>
-          <div>
-            <h4 class="font-bold text-base text-navy-900 dark:text-white">Marc D.</h4>
-            <span class="text-xs text-slate-400 uppercase tracking-wide">Trouy</span>
-          </div>
-        </div>
-      </div>
-      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
-        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
-        <div class="flex text-primary text-xs mb-6">
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-        </div>
-        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
-          "Rénovation complète de ma toiture. Chantier propre, délais respectés, résultat impeccable. Entreprise sérieuse et transparente."
-        </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">S</div>
-          <div>
-            <h4 class="font-bold text-base text-navy-900 dark:text-white">Sophie L.</h4>
-            <span class="text-xs text-slate-400 uppercase tracking-wide">Bourges</span>
-          </div>
-        </div>
-      </div>
-      <div class="p-10 rounded bg-gray-50 dark:bg-surface-dark border-t-4 border-primary relative shadow-lg">
-        <span class="material-symbols-outlined absolute top-6 right-6 text-6xl text-gray-200 dark:text-navy-700 opacity-50">format_quote</span>
-        <div class="flex text-primary text-xs mb-6">
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-          <span class="material-symbols-outlined text-sm fill-current">star</span>
-        </div>
-        <p class="text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed text-lg font-medium">
-          "Très bon travail pour le démoussage et le traitement de ma toiture. Prix très correct et conseils avisés. Je ferai appel à eux pour mes gouttières."
-        </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded bg-navy-900 flex items-center justify-center font-bold text-white text-lg">P</div>
-          <div>
-            <h4 class="font-bold text-base text-navy-900 dark:text-white">Pierre M.</h4>
-            <span class="text-xs text-slate-400 uppercase tracking-wide">Nevers</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-navy-900 text-white border-t border-navy-800 pt-20 pb-10">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-16 border-b border-navy-800 pb-16">
-      <div class="flex items-center gap-4 mb-8 md:mb-0">
-        <img src="https://i.imgur.com/9uaatUV.png" alt="Rénove Tout 18 couvreur" class="h-12 w-auto">
-        <div class="flex flex-col leading-tight">
-          <span class="text-white font-extrabold text-xl uppercase tracking-tight">Rénove Tout 18</span>
-          <span class="text-primary text-xs font-bold uppercase tracking-wider">couvreur</span>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="text-right hidden md:block">
-          <span class="block text-slate-400 text-sm font-medium">Urgence fuite ?</span>
-          <span class="block text-white font-bold">Intervention 24h/7j</span>
-        </div>
-        <a class="bg-primary hover:bg-primary-dark transition-colors text-white font-bold py-4 px-8 rounded shadow-glow flex items-center gap-3" href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');">
-          <span class="material-symbols-outlined text-xl">call</span>
-          07 72 01 51 38
-        </a>
-      </div>
-    </div>
-    <h3 class="text-center text-lg font-bold text-white mb-4 uppercase tracking-wider">Zones d'intervention</h3>
-    <p class="text-center text-slate-400 text-sm mb-12 max-w-2xl mx-auto">Rayon d'action : Cher, Nièvre et Centre-Val de Loire</p>
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 gap-x-6 text-xs text-slate-400 max-w-6xl mx-auto mb-16">
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Bourges (18000)</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Trouy (18570)</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Nevers (58000)</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Saint-Doulchard</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Mehun-sur-Yèvre</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Vierzon</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Saint-Amand-Montrond</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Aubigny-sur-Nère</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Sancerre</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Cosne-Cours-sur-Loire</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> La Charité-sur-Loire</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Pouilly-sur-Loire</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Avord</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Chârost</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Levet</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Dun-sur-Auron</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Sancoins</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Henrichemont</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Menetou-Salon</div>
-      <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default"><span class="text-primary text-xs material-symbols-outlined">location_on</span> Vignoux-sur-Barangeon</div>
-    </div>
-    <div class="text-center text-xs text-slate-600 border-t border-navy-800 pt-8">
-      <p>© 2025 Rénove Tout 18 (18). Tous droits réservés. Mentions légales - Politique de confidentialité.</p>
+    <div class="mt-12 pt-6 border-t border-gray-200 dark:border-gray-800 text-center text-xs text-gray-400">
+      © 2025 COUVREUR VIERZON & BOURGES – Couverture, charpente, zinguerie dans le Cher – Devis gratuit – Tous droits réservés
     </div>
   </div>
 </footer>
 
+<!-- STICKY CTA -->
+<div class="sticky-cta bg-white dark:bg-surface-dark shadow-2xl border-t dark:border-gray-700" id="sticky-cta">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex items-center justify-between">
+      <div class="hidden sm:block"><div class="font-bold text-charcoal dark:text-white">Un projet de couverture ?</div><div class="text-sm text-gray-500">Devis gratuit et rapide</div></div>
+      <div class="flex gap-3 w-full sm:w-auto">
+        <a href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');" class="flex-1 sm:flex-none btn-cta text-white px-6 py-2 rounded-xl font-bold text-center">Appeler</a>
+        <a href="#" onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20projet%20de%20couverture%20dans%20le%20Cher%20(Vierzon%20ou%20Bourges).'); return false;" class="flex-1 sm:flex-none btn-secondary text-white px-6 py-2 rounded-xl font-bold text-center">Devis gratuit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta hidden lg:flex">
+  <a href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');" class="floating-btn bg-primary" title="Appeler"><i class="fas fa-phone"></i></a>
+  <a href="#" onclick="gtag_report_conversion_whatsapp('https://wa.me/33772015138?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20projet%20de%20couverture%20dans%20le%20Cher%20(Vierzon%20ou%20Bourges).'); return false;" class="floating-btn bg-green-500" title="WhatsApp" style="animation-delay:0.5s;"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- SUCCESS POPUP -->
+<div class="popup-overlay" id="success-popup">
+  <div class="bg-white dark:bg-surface-dark rounded-2xl p-8 max-w-md text-center relative">
+    <button onclick="closeSuccessPopup()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"><span class="material-symbols-outlined">close</span></button>
+    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"><span class="material-symbols-outlined text-4xl text-primary">check_circle</span></div>
+    <h3 class="text-2xl font-bold mb-2">Message envoyé ! 🎉</h3>
+    <p class="text-gray-600 mb-4">Merci pour votre demande. Nous vous répondons sous 15 minutes.</p>
+    <a href="tel:0772015138" onclick="return gtag_report_conversion_call('0772015138');" class="inline-block btn-cta text-white px-6 py-2 rounded-xl font-bold">Appeler maintenant</a>
+  </div>
+</div>
+
+<script>
+  // Sticky CTA
+  window.addEventListener('scroll', () => {
+    const sticky = document.getElementById('sticky-cta');
+    if (window.scrollY > 500) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  });
+
+  // Comparison slider
+  const sliderEl = document.getElementById('comparison-slider');
+  if (sliderEl) {
+    const divider = document.getElementById('divider');
+    const after = sliderEl.querySelector('.after');
+    let dragging = false;
+    divider.addEventListener('mousedown', () => dragging = true);
+    document.addEventListener('mouseup', () => dragging = false);
+    sliderEl.addEventListener('mousemove', (e) => {
+      if (!dragging) return;
+      const rect = sliderEl.getBoundingClientRect();
+      let pct = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+      divider.style.left = pct + '%';
+      after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    });
+    sliderEl.addEventListener('touchmove', (e) => {
+      const rect = sliderEl.getBoundingClientRect();
+      let pct = Math.max(0, Math.min(100, ((e.touches[0].clientX - rect.left) / rect.width) * 100));
+      divider.style.left = pct + '%';
+      after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    });
+  }
+
+  // FAQ
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.faq-btn .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+      if (!isOpen) { content.classList.add('open'); if (icon) icon.style.transform = 'rotate(180deg)'; }
+    });
+  });
+
+  // Popup
+  function closeSuccessPopup() { document.getElementById('success-popup').classList.remove('active'); }
+  function showSuccessMessage() {
+    document.getElementById('success-popup').classList.add('active');
+    for (let i = 0; i < 50; i++) {
+      let c = document.createElement('div');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = ['#0070a8','#005a88','#0099d6'][Math.floor(Math.random()*3)];
+      c.style.animationDelay = Math.random() * 2 + 's';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 3000);
+    }
+  }
+
+  // Formulaire → WhatsApp avec conversion Google Ads
+  function sendWhatsApp(event) {
+    event.preventDefault();
+    const prenom = document.getElementById('prenom').value.trim();
+    const nom = document.getElementById('nom').value.trim();
+    const tel = document.getElementById('telephone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const travaux = document.getElementById('travaux').value;
+    const msg = document.getElementById('message').value.trim();
+    if (!prenom || !nom || !tel) return alert('Veuillez remplir prénom, nom et téléphone.');
+
+    let whatsMsg = `Bonjour, je souhaite obtenir un devis pour un projet de couverture dans le Cher (Vierzon/Bourges).\n\nPrénom: ${prenom}\nNom: ${nom}\nTéléphone: ${tel}\n`;
+    if (email) whatsMsg += `Email: ${email}\n`;
+    if (travaux) whatsMsg += `Prestation souhaitée: ${travaux}\n`;
+    if (msg) whatsMsg += `Message: ${msg}\n`;
+    whatsMsg += `Localisation : secteur Vierzon, Bourges ou environs`;
+
+    const whatsappUrl = 'https://wa.me/33772015138?text=' + encodeURIComponent(whatsMsg);
+    // Appel de la fonction de conversion Google Ads pour WhatsApp
+    gtag_report_conversion_whatsapp(whatsappUrl);
+    showSuccessMessage();
+    document.getElementById('contact-form').reset();
+  }
+
+  // Reveal animations
+  const obs = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('active')), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>COUVREUR VIERZON & BOURGES | Couverture, Zinguerie dans le Cher (18) - Devis gratuit</title>
   <meta name="description" content="Expert en couverture à Vierzon (18100) et Bourges (18000) et dans tout le Cher : toiture ardoise, tuile, charpente, zinguerie, démoussage, isolation. Devis gratuit, intervention rapide 24h/24.">
 
-  <!-- Google Ads Global Site Tag (récupéré de l'ancienne version) -->
+  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18110118802"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,6 @@
     gtag('js', new Date());
     gtag('config', 'AW-18110118802');
 
-    // Conversion : Appel téléphonique (récupéré de l'ancienne version)
     function gtag_report_conversion_call(phoneNumber) {
       window.location.href = 'tel:' + phoneNumber;
       gtag('event', 'conversion', {
@@ -25,7 +24,6 @@
       return false;
     }
 
-    // Conversion : WhatsApp (récupéré de l'ancienne version)
     function gtag_report_conversion_whatsapp(whatsappUrl) {
       window.open(whatsappUrl, '_blank');
       gtag('event', 'conversion', {
@@ -50,9 +48,9 @@
       theme: {
         extend: {
           colors: {
-            primary: "#0070a8",
-            "primary-dark": "#005a88",
-            "primary-light": "#E6F3FA",
+            primary: "#fa7315",
+            "primary-dark": "#e05a00",
+            "primary-light": "#fff0e6",
             "secondary-bg": "#F5F5F5",
             "background-light": "#FFFFFF",
             "background-dark": "#111827",
@@ -68,8 +66,8 @@
           boxShadow: {
             soft: "0 4px 20px -2px rgba(0,0,0,0.05)",
             card: "0 2px 10px rgba(0,0,0,0.06)",
-            cta: "0 10px 30px rgba(0,112,168,0.4)",
-            glow: "0 0 20px rgba(0,112,168,0.3)",
+            cta: "0 10px 30px rgba(250,115,21,0.4)",
+            glow: "0 0 20px rgba(250,115,21,0.3)",
           },
           animation: { "pulse-slow":"pulse 3s cubic-bezier(0.4,0,0.6,1) infinite", "float":"float 3s ease-in-out infinite" },
           keyframes: { float: { "0%,100%":{ transform:"translateY(0px)" }, "50%":{ transform:"translateY(-10px)" } } },
@@ -80,10 +78,40 @@
 
   <style>
     body { font-family:'Inter',sans-serif; color:#2C2C2C; scroll-behavior:smooth; }
-    .hero-gradient { background: radial-gradient(circle at center, #0099d6 0%, #0070a8 60%, #005a88 100%); }
+    /* Hero pattern avec flou ajouté */
+    .hero-pattern {
+      position: relative;
+      background-color: #0F172A;
+      background-image: 
+        linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617),
+        linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617),
+        linear-gradient(30deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617),
+        linear-gradient(150deg, #020617 12%, transparent 12.5%, transparent 87%, #020617 87.5%, #020617),
+        linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77),
+        linear-gradient(60deg, #1e293b77 25%, transparent 25.5%, transparent 75%, #1e293b77 75%, #1e293b77);
+      background-size: 40px 70px;
+      background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+    }
+    /* Pseudo-élément flouté pour l'effet demandé */
+    .hero-pattern::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0F172A;
+      background-image: inherit;
+      background-size: inherit;
+      background-position: inherit;
+      filter: blur(8px);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 0;
+    }
     .glass-card { background:rgba(255,255,255,0.15); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.3); }
-    .btn-cta { background:linear-gradient(135deg,#0070a8 0%,#005a88 100%); box-shadow:0 10px 30px rgba(0,112,168,0.4); transition:all 0.3s ease; }
-    .btn-cta:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 15px 40px rgba(0,112,168,0.5); }
+    .btn-cta { background:linear-gradient(135deg,#fa7315 0%,#e05a00 100%); box-shadow:0 10px 30px rgba(250,115,21,0.4); transition:all 0.3s ease; }
+    .btn-cta:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 15px 40px rgba(250,115,21,0.5); }
     .btn-whatsapp { background:linear-gradient(135deg,#25D366 0%,#128C7E 100%); box-shadow:0 10px 30px rgba(37,211,102,0.4); transition:all 0.3s ease; }
     .btn-whatsapp:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 15px 40px rgba(37,211,102,0.5); }
     .btn-secondary { background:#2C2C2C; transition:all 0.3s ease; }
@@ -95,7 +123,7 @@
     .comparison-slider img { display:block; width:100%; height:350px; object-fit:cover; }
     .comparison-slider .after { position:absolute; top:0; left:0; width:100%; height:100%; clip-path:inset(0 0 0 50%); }
     .comparison-slider .divider { position:absolute; top:0; left:50%; width:4px; height:100%; background:white; transform:translateX(-50%); cursor:ew-resize; box-shadow:0 0 20px rgba(0,0,0,0.5); z-index:10; }
-    .comparison-slider .divider::after { content:'\f337'; font-family:'Font Awesome 6 Free'; font-weight:900; position:absolute; top:50%; left:50%; width:50px; height:50px; background:white; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 4px 20px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; color:#0070a8; font-size:1.2rem; }
+    .comparison-slider .divider::after { content:'\f337'; font-family:'Font Awesome 6 Free'; font-weight:900; position:absolute; top:50%; left:50%; width:50px; height:50px; background:white; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 4px 20px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; color:#fa7315; font-size:1.2rem; }
     .popup-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.8); backdrop-filter:blur(5px); z-index:200; display:none; align-items:center; justify-content:center; padding:1rem; }
     .popup-overlay.active { display:flex; animation:fadeIn 0.3s ease; }
     @keyframes fadeIn { from{opacity:0} to{opacity:1} }
@@ -107,10 +135,10 @@
     .floating-btn { width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:all 0.3s ease; animation:float-btn 3s ease-in-out infinite; }
     .floating-btn:hover { transform:scale(1.1); }
     @keyframes float-btn { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
-    .confetti { position:fixed; width:10px; height:10px; background:#0070a8; animation:confetti-fall 3s linear forwards; z-index:9998; }
+    .confetti { position:fixed; width:10px; height:10px; background:#fa7315; animation:confetti-fall 3s linear forwards; z-index:9998; }
     @keyframes confetti-fall { 0%{transform:translateY(-100vh) rotate(0deg);opacity:1} 100%{transform:translateY(100vh) rotate(720deg);opacity:0} }
     .phone-pulse { animation:phone-pulse 2s ease-in-out infinite; }
-    @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,112,168,0.7)} 50%{box-shadow:0 0 0 15px rgba(0,112,168,0)} }
+    @keyframes phone-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(250,115,21,0.7)} 50%{box-shadow:0 0 0 15px rgba(250,115,21,0)} }
     .reveal { opacity:0; transform:translateY(30px); transition:all 0.6s ease; }
     .reveal.active { opacity:1; transform:translateY(0); }
   </style>
@@ -122,11 +150,11 @@
   <div class="container mx-auto px-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
       <div class="flex items-center gap-2 text-charcoal dark:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0070a8" stroke-width="1.5" width="28" height="28" class="inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fa7315" stroke-width="1.5" width="28" height="28" class="inline-block">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
-        <span class="font-bold text-xl">COUVREUR VIERZON & BOURGES</span>
+        <span class="font-bold text-xl">COUVREUR 18</span>
       </div>
     </div>
     <a href="tel:0772015138"
@@ -138,18 +166,21 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:20px 20px;"></div>
-  <div class="container mx-auto px-4 text-center relative z-10">
+<!-- HERO : fond tuiles avec flou, rectangle devis en orange -->
+<section class="hero-pattern relative pt-20 pb-36 overflow-hidden">
+  <!-- Overlay sombre pour la lisibilité -->
+  <div class="absolute inset-0 bg-gradient-to-b from-navy-900/80 to-navy-900/95 z-0"></div>
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent z-0"></div>
+  <div class="container mx-auto px-4 relative z-10 text-center">
     <div class="inline-flex items-center gap-1 bg-charcoal/20 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 border border-white/30 text-white">
       <span class="material-symbols-outlined text-sm">schedule</span>
       INTERVENTION 24H/24 & 7J/7 – VIERZON (18100), BOURGES (18000) ET TOUT LE CHER
     </div>
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-sm">
-      Couverture & Zinguerie <br/><span class="underline decoration-4 decoration-white">artisan près de chez vous</span>
+      Couverture & Zinguerie <br/><span class="underline decoration-4 decoration-primary">artisan près de chez vous</span>
     </h1>
-    <div class="inline-block bg-charcoal text-white font-bold text-lg px-6 py-2 rounded-lg shadow-md mb-6 transform -rotate-1 border border-charcoal">
+    <!-- Rectangle DEVIS GRATUIT en orange -->
+    <div class="inline-block bg-primary text-white font-bold text-lg px-6 py-2 rounded-lg shadow-md mb-6 transform -rotate-1">
       DEVIS GRATUIT SANS ENGAGEMENT
     </div>
     <p class="text-lg md:text-xl font-medium mb-6 max-w-2xl mx-auto opacity-95 text-white">
@@ -366,7 +397,7 @@
               <option>Autre projet</option>
             </select>
           </div>
-          <div><label class="block text-sm font-semibold mb-1">Message</label><textarea id="message" rows="3" class="w-full px-4 py-2 rounded-xl border border-gray-300" placeholder="Décrivez votre projet (surface, type de matériaux, localisation précise : Vierzon, Bourges ou autre commune du Cher)..."></textarea></div>
+          <div><label class="block text-sm font-semibold mb-1">Message</label><textarea id="message" rows="3" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Décrivez votre projet (surface, type de matériaux, localisation précise : Vierzon, Bourges ou autre commune du Cher)..."></textarea></div>
           <button type="submit" class="w-full btn-cta text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2"><span class="material-symbols-outlined">send</span>Envoyer ma demande</button>
         </form>
       </div>
@@ -481,7 +512,7 @@
       let c = document.createElement('div');
       c.className = 'confetti';
       c.style.left = Math.random() * 100 + 'vw';
-      c.style.background = ['#0070a8','#005a88','#0099d6'][Math.floor(Math.random()*3)];
+      c.style.background = ['#fa7315','#e05a00','#ff8c42'][Math.floor(Math.random()*3)];
       c.style.animationDelay = Math.random() * 2 + 's';
       document.body.appendChild(c);
       setTimeout(() => c.remove(), 3000);
@@ -506,7 +537,6 @@
     whatsMsg += `Localisation : secteur Vierzon, Bourges ou environs`;
 
     const whatsappUrl = 'https://wa.me/33772015138?text=' + encodeURIComponent(whatsMsg);
-    // Appel de la fonction de conversion Google Ads pour WhatsApp
     gtag_report_conversion_whatsapp(whatsappUrl);
     showSuccessMessage();
     document.getElementById('contact-form').reset();
